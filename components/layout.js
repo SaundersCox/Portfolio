@@ -3,9 +3,10 @@ import Image from "next/image";
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
+import Nav from "./Nav";
 
 const name = "Saunders Cox";
-export const siteTitle = "Portfolio";
+export const siteTitle = "Saunders Cox";
 
 export default function Layout({ children, home }) {
   return (
@@ -21,10 +22,12 @@ export default function Layout({ children, home }) {
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <header className={styles.header}>
         {home ? (
           <>
+            <Nav />
             <Image
               priority
               src="/images/profile.jpg"
@@ -37,6 +40,7 @@ export default function Layout({ children, home }) {
           </>
         ) : (
           <>
+            {/* {conundrum ? <Nav conundrum></Nav> : <></>} */}
             <Link href="/">
               <a>
                 <Image

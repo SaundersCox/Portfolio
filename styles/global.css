@@ -1,3 +1,11 @@
+:root {
+  --fg: #33658a;
+  --bg: #86bbd8;
+  --txt: #2f4858;
+  --highlight: #f6ae2d;
+  --highlight2: #f26419;
+}
+
 html,
 body {
   padding: 0;
@@ -6,6 +14,7 @@ body {
     Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 18px;
+  cursor: grabbing;
 }
 
 * {
@@ -13,12 +22,13 @@ body {
 }
 
 a {
-  color: 0070f3;
+  color: var(--highlight);
+  cursor: cell;
   text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;
+  color: var(--highlight2);
 }
 
 img {
